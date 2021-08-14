@@ -1,0 +1,8 @@
+<h1>MyPage for [<%= @user.username %>] <%= @user.fullname %></h1>
+<% if @students != nil %>
+  <ul>
+    <% @students.each { |st| %>
+      <li><%= link_to st.fullname, user_path(st.id) %></li>
+    <% } %>
+  </ul>
+<% end %>
